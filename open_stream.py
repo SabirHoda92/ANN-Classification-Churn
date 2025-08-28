@@ -1,13 +1,13 @@
 import streamlit as st
 import numpy as np
-import tensorflow as tf
+import tensorflow
 from sklearn.preprocessing import StandardScaler,LabelEncoder,OneHotEncoder
 import pandas as pd
 import pickle
 
 
 #load the trained model
-model = tf.keras.models.load_model('model.h5')
+model = tensorflow.keras.models.load_model('model.h5')
 
 #load the enocder and scaler
 with open('one_hot_encode.pk1', 'rb') as file:
